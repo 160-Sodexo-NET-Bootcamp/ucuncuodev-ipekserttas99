@@ -69,7 +69,7 @@ namespace TrashCollectionSystem
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TrashCollectionSystem v1"));
             }
 
-            app.UseMiddleware<BlockMiddleware>();
+            app.UseMiddleware<GetVehicleByIdMiddleware>();
 
             app.UseHttpsRedirection();
 
