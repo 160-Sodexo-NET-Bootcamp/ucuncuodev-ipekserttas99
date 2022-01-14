@@ -11,7 +11,7 @@ using TrashCollectionSystem.Utilities;
 
 namespace TrashCollectionSystem.Controllers
 {
-    [Route("api/[controller]s")]
+    [Route("[controller]s")]
     [ApiController]
     public class KMeansController : ControllerBase
     {

@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace TrashCollectionSystem.Controllers
 {
-    [Route("api/[controller]s")]
+    [Route("[controller]s")]
     [ApiController]
     public class ContainerController : ControllerBase
     {
