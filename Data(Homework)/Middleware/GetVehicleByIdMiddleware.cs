@@ -7,20 +7,20 @@ using System.Threading.Tasks;
 
 namespace Data_Homework_.Middleware
 {
-    public class BlockMiddleware
+    public class GetVehicleByIdMiddleware
     {
         private readonly RequestDelegate next;
 
-        public BlockMiddleware(RequestDelegate next)
+        public GetVehicleByIdMiddleware(RequestDelegate next)
         {
             this.next = next;
         }
 
         public async Task Invoke (HttpContext context)
         {
-            if (context.Request.Path.StartsWithSegments("/api/Vehicles/1")) //1 id'li vehicle'a gittiğinde 
+            if (context.Request.Path.StartsWithSegments("/GetVehicleById")) //GetVehicleById metoduna gidildiğinde
             {
-                context.Response.StatusCode = 403;
+                context.Response.StatusCode = 403; //403 dön
                 await context.Response.WriteAsync("403 -  3. odev kosulu saglandi...");
                 
                 return;
